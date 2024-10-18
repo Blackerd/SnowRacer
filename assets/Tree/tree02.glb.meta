@@ -1,0 +1,161 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9",
+  "files": [],
+  "subMetas": {
+    "e93f5": {
+      "importer": "gltf-mesh",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@e93f5",
+      "displayName": "",
+      "id": "e93f5",
+      "name": "Sphere.019.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 3376
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6a416": {
+      "importer": "gltf-material",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@6a416",
+      "displayName": "",
+      "id": "6a416",
+      "name": "Tree Stars Gold.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "39c72": {
+      "importer": "gltf-material",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@39c72",
+      "displayName": "",
+      "id": "39c72",
+      "name": "Tree Decoration White.001.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "990c3": {
+      "importer": "gltf-material",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@990c3",
+      "displayName": "",
+      "id": "990c3",
+      "name": "Tree Green.001.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b194a": {
+      "importer": "gltf-material",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@b194a",
+      "displayName": "",
+      "id": "b194a",
+      "name": "Tree Brown.001.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "996da": {
+      "importer": "gltf-material",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@996da",
+      "displayName": "",
+      "id": "996da",
+      "name": "Tree Lights.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "034ca": {
+      "importer": "gltf-scene",
+      "uuid": "4d75611c-adb2-42d9-ba3c-2c8078168bf9@034ca",
+      "displayName": "",
+      "id": "034ca",
+      "name": "tree02.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@e93f5"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@6a416",
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@39c72",
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@990c3",
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@b194a",
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@996da"
+      ],
+      "scenes": [
+        "4d75611c-adb2-42d9-ba3c-2c8078168bf9@034ca"
+      ]
+    }
+  }
+}

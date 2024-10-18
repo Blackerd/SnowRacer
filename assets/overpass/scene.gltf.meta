@@ -1,0 +1,383 @@
+{
+  "ver": "2.3.13",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01",
+  "files": [],
+  "subMetas": {
+    "17650": {
+      "importer": "gltf-mesh",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@17650",
+      "displayName": "",
+      "id": "17650",
+      "name": "overpass_Lights.003_0.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 1824
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "54270": {
+      "importer": "gltf-mesh",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@54270",
+      "displayName": "",
+      "id": "54270",
+      "name": "overpass_Material.006_0.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 14400
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8ef9a": {
+      "importer": "gltf-mesh",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@8ef9a",
+      "displayName": "",
+      "id": "8ef9a",
+      "name": "road_road.001_0.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 26
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1f62e": {
+      "importer": "gltf-mesh",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@1f62e",
+      "displayName": "",
+      "id": "1f62e",
+      "name": "overpass_Material.005_0.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 12532
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8b3c7": {
+      "importer": "gltf-mesh",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@8b3c7",
+      "displayName": "",
+      "id": "8b3c7",
+      "name": "overpass_Lights.004_0.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 1824
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b2618": {
+      "importer": "gltf-mesh",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@b2618",
+      "displayName": "",
+      "id": "b2618",
+      "name": "overpass.001_Material_0.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 3796
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3effa": {
+      "importer": "texture",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@3effa",
+      "displayName": "",
+      "id": "3effa",
+      "name": "UnnamedTexture-0.texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/overpass/textures/road.001_baseColor.png"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "221a5": {
+      "importer": "texture",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@221a5",
+      "displayName": "",
+      "id": "221a5",
+      "name": "UnnamedTexture-1.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/overpass/textures/Material.005_baseColor.jpeg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0089c": {
+      "importer": "texture",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@0089c",
+      "displayName": "",
+      "id": "0089c",
+      "name": "UnnamedTexture-2.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/overpass/textures/Material.006_baseColor.jpeg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9b633": {
+      "importer": "texture",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@9b633",
+      "displayName": "",
+      "id": "9b633",
+      "name": "UnnamedTexture-3.texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": false,
+        "imageUuidOrDatabaseUri": "db://assets/overpass/textures/Material_baseColor.jpeg"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6f4aa": {
+      "importer": "gltf-material",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@6f4aa",
+      "displayName": "",
+      "id": "6f4aa",
+      "name": "road.001.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "551ec": {
+      "importer": "gltf-material",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@551ec",
+      "displayName": "",
+      "id": "551ec",
+      "name": "Material.005.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "95f35": {
+      "importer": "gltf-material",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@95f35",
+      "displayName": "",
+      "id": "95f35",
+      "name": "Lights.003.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5c108": {
+      "importer": "gltf-material",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@5c108",
+      "displayName": "",
+      "id": "5c108",
+      "name": "Material.006.material",
+      "userData": {
+        "gltfIndex": 3
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2de92": {
+      "importer": "gltf-material",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@2de92",
+      "displayName": "",
+      "id": "2de92",
+      "name": "Lights.004.material",
+      "userData": {
+        "gltfIndex": 4
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b4e6b": {
+      "importer": "gltf-material",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@b4e6b",
+      "displayName": "",
+      "id": "b4e6b",
+      "name": "Material.material",
+      "userData": {
+        "gltfIndex": 5
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d1932": {
+      "importer": "gltf-scene",
+      "uuid": "d5771f42-91d7-49d4-a8a1-589b53ff6d01@d1932",
+      "displayName": "",
+      "id": "d1932",
+      "name": "scene.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "uri": "db://assets/overpass/textures/road.001_baseColor.png"
+      },
+      {
+        "uri": "db://assets/overpass/textures/Material.005_baseColor.jpeg"
+      },
+      {
+        "uri": "db://assets/overpass/textures/Material.006_baseColor.jpeg"
+      },
+      {
+        "uri": "db://assets/overpass/textures/Material_baseColor.jpeg"
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@8ef9a",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@1f62e",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@17650",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@54270",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@8b3c7",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@b2618"
+      ],
+      "skeletons": [],
+      "textures": [
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@3effa",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@221a5",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@0089c",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@9b633"
+      ],
+      "materials": [
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@6f4aa",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@551ec",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@95f35",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@5c108",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@2de92",
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@b4e6b"
+      ],
+      "scenes": [
+        "d5771f42-91d7-49d4-a8a1-589b53ff6d01@d1932"
+      ]
+    }
+  }
+}
