@@ -9,6 +9,9 @@ export class RoadController extends Component {
     @property(Node)
     roadSegment2: Node = null;
 
+    @property(Node)
+    character: Node = null; // Node nhân vật
+
     private roadLength: number;
 
     start() {
@@ -19,34 +22,34 @@ export class RoadController extends Component {
         } else {
             console.error("No BoxCollider found on roadSegment1");
         }
-   // Đặt vị trí ban đầu cho đoạn đường
-   this.roadSegment2.setPosition(new Vec3(this.roadSegment1.position.x, this.roadSegment1.position.y, this.roadSegment1.position.z + this.roadLength));
-}
+        // Đặt vị trí ban đầu cho đoạn đường
+        this.roadSegment2.setPosition(new Vec3(this.roadSegment1.position.x, this.roadSegment1.position.y, this.roadSegment1.position.z + this.roadLength));
+    }
+
     update(deltaTime: number) {
-        this.loopRoad();
+        // this.loopRoad();
     }
 
     private loopRoad() {
         // Cập nhật vị trí của đoạn đường dựa vào vị trí của nhân vật
         const position1 = this.roadSegment1.position;
         const position2 = this.roadSegment2.position;
+        const characterPositionZ = this.character.position.z; // Lấy vị trí của nhân vật
 
-        console.log('Road 1 Position:', position1);
-        console.log('Road 2 Position:', position2);
+        // Cập nhật vị trí đường đi
+        // Di chuyển đoạn đường về phía trước (theo trục Z)
+        const moveSpeed = 0.1; // Tốc độ di chuyển
+        this.roadSegment1.setPosition(new Vec3(position1.x, position1.y, position1.z - moveSpeed));
+        this.roadSegment2.setPosition(new Vec3(position2.x, position2.y, position2.z - moveSpeed));
 
-        // Kiểm tra nếu đoạn đường đầu tiên ra khỏi tầm nhìn
-        if (position1.z < -this.roadLength) {
-            this.roadSegment1.setPosition(new Vec3(position2.x, position2.y, position2.z + this.roadLength));
-            this.swapSegments(); // Hoán đổi vị trí đoạn đường
-            console.log('Swapped Road 1 to new position:', this.roadSegment1.position);
+        if (this.roadSegment1.position.z - characterPositionZ > this.roadLength) {
+            this.roadSegment1.setPosition(new Vec3(this.roadSegment1.position.x, this.roadSegment1.position.y, this.roadSegment2.position.z + this.roadLength));
         }
 
-        // Kiểm tra nếu đoạn đường thứ hai ra khỏi tầm nhìn
-        if (position2.z < -this.roadLength) {
-            this.roadSegment2.setPosition(new Vec3(position1.x, position1.y, position1.z + this.roadLength));
-            this.swapSegments(); // Hoán đổi vị trí đoạn đường
-            console.log('Swapped Road 2 to new position:', this.roadSegment2.position);
+        if (this.roadSegment2.position.z - characterPositionZ > this.roadLength) {
+            this.roadSegment2.setPosition(new Vec3(this.roadSegment2.position.x, this.roadSegment2.position.y, this.roadSegment1.position.z + this.roadLength));
         }
+
     }
 
     private swapSegments() {

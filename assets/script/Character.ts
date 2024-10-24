@@ -1,20 +1,21 @@
-import { _decorator, Component, Node, Vec3, input, Input, KeyCode, RigidBody, v3, EventKeyboard } from 'cc';
+import { _decorator, Component, Node, Vec3, input, Input, KeyCode, RigidBody, v3, EventKeyboard, SkeletalAnimation } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('Character')
 export class Cha extends Component {
     @property
-    moveSpeed: number = 100; // Tốc độ di chuyển tự động
+    moveSpeed: number = 20; // Tốc độ di chuyển tự động
 
     @property
-    horizontalLimit: number = 50; // Giới hạn di chuyển trái/phải
+    jumpForce: number = 100; // Lực nhảy
 
-    @property
-    jumpForce: number = 10; // Lực nhảy
+    @property(SkeletalAnimation)
+    skeletalAnimation: SkeletalAnimation = null; // Animation của nhân vật
 
     private rigidBody: RigidBody;
     private isMovingLeft: boolean = false; // Trạng thái di chuyển sang trái
     private isMovingRight: boolean = false; // Trạng thái di chuyển sang phải
+    private isJumping: boolean = false; // Trạng thái nhảy
 
     start() {
         // Lấy RigidBody của nhân vật để xử lý vật lý
@@ -24,23 +25,33 @@ export class Cha extends Component {
         input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
 
-        // Bắt đầu tự động di chuyển
-        this.schedule(this.moveForward, 0.1); // Di chuyển tự động về phía trước
+        // Chạy animation trượt
+        this.playSlideAnimation();
     }
 
-    // Di chuyển về phía trước
-    private moveForward() {
-        const currentPos = this.node.position;
-        // Di chuyển nhân vật về phía trước (theo trục Z)
-        this.node.setPosition(new Vec3(currentPos.x, currentPos.y, currentPos.z - this.moveSpeed));
-        
-        // Xử lý di chuyển trái và phải
+    update(deltaTime: number) {
+        console.log(`Velocity: ${this.rigidBody.linearVelocity}`);
+        this.moveForward(deltaTime); // Di chuyển liên tục về phía trước
+    }
+
+    private moveForward(deltaTime: number) {
+        // Lấy vận tốc hiện tại của nhân vật
+        const currentVelocity = this.rigidBody.linearVelocity.clone();
+
+        // Tạo vận tốc mới để di chuyển về phía trước (theo trục Z)
+        currentVelocity.z = -this.moveSpeed;
+
+        // Kiểm tra trạng thái di chuyển trái/phải
         if (this.isMovingLeft) {
-            this.moveLeft();
+            currentVelocity.x = -this.moveSpeed; // Di chuyển sang trái
+        } else if (this.isMovingRight) {
+            currentVelocity.x = this.moveSpeed; // Di chuyển sang phải
+        } else {
+            currentVelocity.x = 0; // Không di chuyển ngang khi không bấm phím
         }
-        if (this.isMovingRight) {
-            this.moveRight();
-        }
+
+        // Cập nhật vận tốc mới cho RigidBody
+        this.rigidBody.setLinearVelocity(currentVelocity);
     }
 
     // Xử lý sự kiện phím nhấn và thả phím
@@ -48,9 +59,11 @@ export class Cha extends Component {
         switch (event.keyCode) {
             case KeyCode.KEY_A: // Di chuyển sang trái
                 this.isMovingLeft = true;
+                this.isMovingRight = false; // Ngừng di chuyển sang phải khi bấm trái
                 break;
             case KeyCode.KEY_D: // Di chuyển sang phải
                 this.isMovingRight = true;
+                this.isMovingLeft = false; // Ngừng di chuyển sang trái khi bấm phải
                 break;
             case KeyCode.SPACE: // Nhảy
                 this.jump();
@@ -69,27 +82,38 @@ export class Cha extends Component {
         }
     }
 
-    private moveLeft() {
-        const currentPos = this.node.position;
-        const speedFactor = 0.6; // Tăng giá trị này để tăng tốc độ phản hồi
-        const newX = Math.max(currentPos.x - this.moveSpeed * speedFactor, -this.horizontalLimit); // Giới hạn di chuyển sang trái
-        this.node.setPosition(new Vec3(newX, currentPos.y, currentPos.z));
-    }
-    
-    private moveRight() {
-        const currentPos = this.node.position;
-        const speedFactor = 0.6; // Tăng giá trị này để tăng tốc độ phản hồi
-        const newX = Math.min(currentPos.x + this.moveSpeed * speedFactor, this.horizontalLimit); // Giới hạn di chuyển sang phải
-        this.node.setPosition(new Vec3(newX, currentPos.y, currentPos.z));
-    }
-    
-
-    private jump() {
-        if (this.rigidBody) {
-            this.rigidBody.applyImpulse(v3(0, this.jumpForce, 0)); // Nhảy theo trục Y
+    // Hàm để phát animation trượt
+    private playSlideAnimation() {
+        if (this.skeletalAnimation) {
+            this.skeletalAnimation.play('Action'); // 'Action' là tên animation trượt
         }
     }
-    
+
+    // Phát animation nhảy
+    private playJumpAnimation() {
+        if (this.skeletalAnimation) {
+            this.skeletalAnimation.play('Jump'); // Giả sử 'Jump' là tên animation nhảy
+        }
+    }
+
+    private jump() {
+        if (this.rigidBody && !this.isJumping) {
+            // Lấy vận tốc hiện tại và chỉ thay đổi trục Y để nhảy
+            const currentVelocity = this.rigidBody.linearVelocity.clone();
+            currentVelocity.y = this.jumpForce;
+            this.rigidBody.setLinearVelocity(currentVelocity);
+
+            this.isJumping = true;
+            this.playJumpAnimation();
+        }
+    }
+
+    onCollisionEnter() {
+        // Khi nhân vật chạm đất, cho phép nhảy lại
+        this.isJumping = false;
+        this.playSlideAnimation();
+    }
+
     // Hủy đăng ký sự kiện khi component bị hủy
     onDestroy() {
         input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
