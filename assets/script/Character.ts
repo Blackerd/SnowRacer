@@ -26,12 +26,12 @@ export class Cha extends Component {
         input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
 
         // Chạy animation trượt
-        this.playSlideAnimation();
+       // this.playSlideAnimation();
     }
 
     update(deltaTime: number) {
         console.log(`Velocity: ${this.rigidBody.linearVelocity}`);
-        this.moveForward(deltaTime); // Di chuyển liên tục về phía trước
+       // this.moveForward(deltaTime); // Di chuyển liên tục về phía trước
     }
 
     private moveForward(deltaTime: number) {
@@ -39,7 +39,7 @@ export class Cha extends Component {
         const currentVelocity = this.rigidBody.linearVelocity.clone();
 
         // Tạo vận tốc mới để di chuyển về phía trước (theo trục Z)
-        currentVelocity.z = -this.moveSpeed;
+       // currentVelocity.z = -this.moveSpeed;
 
         // Kiểm tra trạng thái di chuyển trái/phải
         if (this.isMovingLeft) {
